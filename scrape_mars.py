@@ -34,7 +34,7 @@ def scrape():
     soup = BeautifulSoup(html, 'html.parser')
 
     # Navigate to the page to scrape the full size featured image
-    browser.click_link_by_partial_text('Full')
+    browser.click_link_by_partial_text('FULL')
     time.sleep(1)
     url_jpl2 = 'https://www.jpl.nasa.gov' + soup.find('a', class_='button')['data-link']
     browser.visit(url_jpl2)
